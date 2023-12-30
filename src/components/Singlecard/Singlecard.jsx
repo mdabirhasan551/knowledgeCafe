@@ -1,5 +1,7 @@
 import React from "react";
-import "./Singlecard.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Singlecard.css";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 const Singlecard = ({ blogs }) => {
   console.log(blogs);
@@ -15,11 +17,12 @@ const Singlecard = ({ blogs }) => {
             <div className="flex justify-between items-center">
               <h2 className="card-title">{blogs.title}</h2>
               <p className="ms-40">{blogs.readingTime}</p>
+              <button><FontAwesomeIcon icon={faBookmark}/></button>
             </div>
 
             <p>{blogs.content}</p>
             <div className="card-actions justify-start">
-              <button className="btn btn-secondary font-bold">Read More</button>
+              <button className="btn btn-secondary font-bold">Mark As Viewed</button>
             </div>
           </div>
         </div>
