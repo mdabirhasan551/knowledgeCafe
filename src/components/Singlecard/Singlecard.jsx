@@ -7,9 +7,9 @@ const Singlecard = ({ blogs }) => {
   console.log(blogs);
 
   return (
-    <div className="card-width">
+    <div className="card-width lg:w-3/4 sm:w-20">
       <div className="flex items-center justify-between m-20">
-        <div className="card card-compact w-full h-96 shadow-xl">
+        <div className="card card-compact w-full md:w-96 lg:w-full h-96 shadow-xl">
           <figure>
             <img src={blogs.image} alt="Shoes" />
           </figure>
