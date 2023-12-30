@@ -4,27 +4,27 @@
       "title": "Introduction to React",
       "content": "In the dynamic landscape of web development, React has emerged as a game-changer. Developed and maintained by Facebook, React is an...",
       "image": "/public/fakedata image/React.jpg",
-      "readingTime": "10 minutes"
+      "readingTime": 10
     },
     {
       "id": 2,
       "title": "Getting Started with JavaScript",
       "content": "As the scripting language of the web, JavaScript injects interactivity and dynamism into static web pages. Widely supported by...",
       "image": "/public/fakedata image/javascript-illustration.png",
-      "readingTime": "12 minutes"
+      "readingTime": 12
     },
     {
       "id": 3,
       "title": "CSS Styling Techniques",
       "content": "Cascading Style Sheets (CSS) is the artistic palette of web development, allowing developers to breathe life into the structural elements defined by HTML. CSS empowers designers to control the layout, colors, and...",
       "image": "/public/fakedata image/css.jpg",
-      "readingTime": "7 minutes"
+      "readingTime": 7
     },
     {
       "id": 4,
       "title": "Building Responsive Web Designs",
       "content": "In an era dominated by diverse device types and screen sizes, responsive web design has become imperative. This approach ensures that web applications and sites adapt seamlessly to various devices, from...",
       "image": "/public/fakedata image/responsive-web-design.jpeg",
-      "readingTime": "18 minutes"
+      "readingTime": 18
     }
   ]
