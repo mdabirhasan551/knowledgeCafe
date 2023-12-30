@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Singlecard.css";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
-const Singlecard = ({ blogs, handleReadingTime }) => {
+const Singlecard = ({ blogs, handleReadingTime, handleBookmark }) => {
   return (
     <div className="card-width lg:w-3/4 sm:w-20">
       <div className="flex items-center justify-between m-20">
@@ -15,7 +15,9 @@ const Singlecard = ({ blogs, handleReadingTime }) => {
             <div className="flex lg:justify-between sm:justify-start items-center">
               <h2 className="card-title">{blogs.title}</h2>
               <p className="ms-40">{blogs.readingTime} minutes</p>
-              <button>
+              <button onClick={()=>{
+                handleBookmark(1);
+              }}>
                 <FontAwesomeIcon icon={faBookmark} />
               </button>
             </div>

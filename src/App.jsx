@@ -6,18 +6,18 @@ import Sidecard from "./components/Sidecard/Sidecard";
 const App = () => {
   const [readingTime, setReadingTime] = useState("");
   const [bookmarked, setBookMarked] = useState(0);
-  const handleBookmark = (numberOfBookmarked) =>{
+  const handleBookmark = (numberOfBookmarked) => {
     const previousRead = JSON.parse(localStorage.getItem("Bookmark"));
-    if(previousRead){
+    if (previousRead) {
       const newRead = previousRead + numberOfBookmarked;
       localStorage.setItem("Bookmark", newRead);
       setBookMarked(newRead);
-    }
-    else{
+    } else {
       localStorage.setItem("Bookmark", numberOfBookmarked);
       setBookMarked(numberOfBookmarked);
     }
-  }
+  };
+
   const handleReadingTime = (time) => {
     const previousTime = JSON.parse(localStorage.getItem("readingTime"));
     if (previousTime) {
@@ -29,12 +29,20 @@ const App = () => {
       setReadingTime(time);
     }
   };
+
   return (
     <div>
       <Header></Header>
       <div className="flex justify-between ms-30 me-30">
-        <Blogs handleReadingTime={handleReadingTime} />
-        <Sidecard className="m-12" readingTime={readingTime} />
+        <Blogs
+          handleBookmark={handleBookmark}
+          handleReadingTime={handleReadingTime}
+        />
+        <Sidecard
+          className="m-12"
+          bookmarked={bookmarked}
+          readingTime={readingTime}
+        />
       </div>
     </div>
   );
