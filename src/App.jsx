@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'react-daisyui';
+import Header from './components/Header/Header';
 
 const App = () => {
     return (
         <div>
-            <h1 className='text-3xl font-bold underline'>Hello</h1>
-            <Button color='primary'>Click me</Button>
+            <Header></Header>
         </div>
     );
 };
