@@ -2,25 +2,29 @@
     {
       "id": 1,
       "title": "Introduction to React",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...",
-      "image": "https://example.com/react-image.jpg"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+      "image": "/public/fakedata image/React.jpg",
+      "readingTime": "10 minutes"
     },
     {
       "id": 2,
       "title": "Getting Started with JavaScript",
       "content": "Nulla facilisi. Aenean in mauris eu tellus laoreet finibus...",
-      "image": "https://example.com/javascript-image.jpg"
+      "image": "/public/fakedata image/javascript-illustration.png",
+      "readingTime": "12 minutes"
     },
     {
       "id": 3,
       "title": "CSS Styling Techniques",
       "content": "Curabitur nec sapien non libero efficitur viverra vel sed augue...",
-      "image": "https://example.com/css-image.jpg"
+      "image": "/public/fakedata image/css.jpg",
+      "readingTime": "7 minutes"
     },
     {
       "id": 4,
       "title": "Building Responsive Web Designs",
       "content": "Pellentesque ullamcorper facilisis metus, et cursus nunc congue sit amet...",
-      "image": "https://example.com/responsive-image.jpg"
+      "image": "/public/fakedata image/responsive-web-design.jpeg",
+      "readingTime": "18 minutes"
     }
   ]
