@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Singlecard from "../Singlecard/Singlecard";
 
-const Blogs = ({ handleReadingTime, handleBookmark }) => {
+const Blogs = ({ handleReadingTime, handleBookmark, handleItems }) => {
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ const Blogs = ({ handleReadingTime, handleBookmark }) => {
           blogs={blog}
           handleReadingTime={handleReadingTime}
           handleBookmark={handleBookmark}
+          handleItems={handleItems}
         ></Singlecard>
       ))}
     </div>

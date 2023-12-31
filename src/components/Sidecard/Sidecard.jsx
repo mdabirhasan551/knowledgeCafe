@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const Sidecard = ({ readingTime, bookmarked }) => {
+const Sidecard = ({ readingTime, bookmarked, items }) => {
   const [time, setTime] = useState(0);
   const [readCount, setReadCount] = useState(0);
+  const [readingItems, setReadingItems] = useState("");
 
   useEffect(() => {
     const getReadingTime = localStorage.getItem("readingTime");
@@ -14,6 +15,11 @@ const Sidecard = ({ readingTime, bookmarked }) => {
     setReadCount(getReadCount);
   }, [bookmarked]);
 
+  useEffect(() => {
+    const getReadingItems = localStorage.getItem("Title");
+    setReadingItems(getReadingItems);
+  }, [items]);
+
   return (
     <div className="lg:w-3/4 sm:w-1/3 me-20 m-10 border-black border-2 rounded">
       <h1 className="font-bold text-3xl text-center m-5">
@@ -23,7 +29,7 @@ const Sidecard = ({ readingTime, bookmarked }) => {
         Total Read Time: {time}
       </h1>
       <h1 className="font-bold text-3xl text-center m-5">
-        My Bookmarked Contents:{" "}
+        My Bookmarked Contents: {readingItems}
       </h1>
     </div>
   );

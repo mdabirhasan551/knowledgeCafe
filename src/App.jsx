@@ -6,6 +6,8 @@ import Sidecard from "./components/Sidecard/Sidecard";
 const App = () => {
   const [readingTime, setReadingTime] = useState("");
   const [bookmarked, setBookMarked] = useState(0);
+  const [items, setItems] = useState();
+
   const handleBookmark = (numberOfBookmarked) => {
     const previousRead = JSON.parse(localStorage.getItem("Bookmark"));
     if (previousRead) {
@@ -30,6 +32,20 @@ const App = () => {
     }
   };
 
+  const handleItems = (listItems) => {
+    const previousTitle = JSON.parse(localStorage.getItem("Title"));
+    console.log(previousTitle);
+    
+    if (previousTitle) {
+      let newTitle = `${previousTitle}, ${listItems}`;
+      localStorage.setItem("Title", JSON.stringify(newTitle));
+      setItems(newTitle);
+    } else {
+      localStorage.setItem("Title", JSON.stringify(listItems));
+      setItems(listItems);
+    }
+  };
+
   return (
     <div>
       <Header></Header>
@@ -37,11 +53,13 @@ const App = () => {
         <Blogs
           handleBookmark={handleBookmark}
           handleReadingTime={handleReadingTime}
+          handleItems={handleItems}
         />
         <Sidecard
           className="m-12"
           bookmarked={bookmarked}
           readingTime={readingTime}
+          items={items}
         />
       </div>
     </div>
